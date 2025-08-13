@@ -1,0 +1,76 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+// layout/_topglass.scss
+.topGlass {
+  width: 90%;
+  height: 245px;
+  left: 50%;
+  top: 0;
+  position: absolute;
+  transform: translateX(-50%);
+
+  li {
+    position: absolute;
+    animation:bounce 2s infinite;
+    @keyframes bounce{
+      0%, 100%{
+        transform: translateY(0);
+      }
+      50%{
+        transform: translateY(-20px);
+      }
+    }
+    &:first-child {
+      transform: rotate(45deg);
+      left: 0;
+      top: 0;
+      @include mixins.tablet{
+        left:-50px;
+      }
+      @include mixins.mobile{
+        top:100px;
+      }
+      img{
+        @include mixins.tablet{
+          width:50%;
+        }
+        @include mixins.mobile{
+          width:30%;
+        }
+      }
+    }
+    &:nth-child(2) {
+      right: 0;
+      @include mixins.tablet{
+        top:70px;
+        right:-50px;
+      }
+      @include mixins.mobile{
+        top:118px;
+        right:-69px;
+      }
+      img{
+        @include mixins.tablet{
+          width:50%;
+        }
+      }
+    }
+    &:last-child {
+      right: 180px;
+      top: 70px;
+      @include mixins.tablet{
+        right:50px;
+        top:120px;
+      }
+      @include mixins.mobile{
+        right:-10px;
+      }
+      img{
+        @include mixins.tablet{
+          width:50%;
+        }
+      }
+    }
+  }
+}
