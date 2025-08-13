@@ -1,0 +1,75 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+.topVideo {
+  width: 90%;
+  margin: 7.5rem auto;
+  position: relative;
+  padding-top:56.25%;
+  height: 90%;
+  filter: variables.$drop-shadow-light;
+
+  @include mixins.mobile{
+    margin:2rem auto;
+  }
+
+  div {
+    position: absolute;
+  }
+
+  iframe {
+    border-radius: 14px;
+    width: 100%;
+    height: 90%;
+    display: block;
+  }
+
+  &1 {
+    left: 50%;
+    top:0;
+    transform: translateX(-50%);
+    width: 90%;
+    height:90%;
+    z-index: 3;
+    @include mixins.tablet{
+      width:100%;
+      height:100%;
+      left:0;
+      transform:none;
+      filter:drop-shadow(0 5px 5px rgba(0,0,0,0.5));
+    }
+  }
+
+  &2 {
+    width: 80%;
+    height:80%;
+    overflow: hidden;
+    top: 5%;
+    @include mixins.tablet{
+      top:15%;
+      margin:0 auto;
+      width:90%;
+      height:90%;
+      left:50%;
+      transform:translateX(-50%);
+      z-index:2;
+    }
+  }
+
+  &3 {
+    width: 80%;
+    right: 0;
+    height: 80%;
+    overflow: hidden;
+    top: 5%;
+    @include mixins.tablet{
+      margin: 0 auto;
+      width: 80%;
+      height:80%;
+      transform:translateX(-50%);
+      z-index:0;
+      top:29%;
+      left:50%;
+    }
+  }
+}

@@ -1,0 +1,133 @@
+@use '../abstracts/variables';
+@use '../abstracts/mixins';
+
+// layout/_topbanner.scss
+.topBanner {
+  margin-top: 4.375rem;
+  position: relative;
+  @include mixins.mobile{
+    margin-top:1.875rem;
+  }
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.625rem;
+    @include mixins.mobile{
+      font-size:2.3rem;
+    }
+    }
+  h2{
+    font-size: 1rem;
+    font-weight: 500;
+    color: variables.$text-light-gray;
+    text-align:center;
+    @include mixins.mobile{
+      font-size:1.16rem;
+    }
+    }
+  
+  ul:nth-of-type(1) {
+    width: 12.625rem;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    gap: 10px;
+    @include mixins.flex-center-align;
+    margin-top: 1.5rem;
+    @include mixins.mobile{
+      width:11.6rem;
+    }
+
+    li {
+      width: 6rem;
+      padding: 0.625rem 1.25rem;
+      @include mixins.mobile{
+        width:6.6rem;
+        padding:0.83rem;
+        text-align:center;
+      }
+
+      &:first-child {
+        border: 1px solid variables.$border-light-gray;
+        border-radius: 8px;
+        font-weight: 600;
+      }
+      &:last-child {
+        border-radius: 8px;
+        background-color: variables.$black-color;
+        color: variables.$white-color;
+      }
+      a{
+        font-size:0.875rem;
+      }
+    }
+  }
+
+  input {
+    width: 33.75rem;
+    margin: 0 auto;
+    display: block;
+    height: 3.75rem;
+    padding-left: 3.5rem;
+    border-radius: 12px;
+    position: relative;
+    z-index:999;
+    @include mixins.card-shadow; // filter: drop-shadow(...)
+    border: none;
+    margin-top: 3rem;
+    @include mixins.mobile{
+      width:90%;
+      height:50px;
+    }
+
+    &::placeholder { // .topBanner input::placeholder
+      color: variables.$text-light-gray;
+      font-size: 1rem;
+    }
+
+    @include mixins.mobile{
+      width:80%;
+    }
+  }
+
+  ul:nth-of-type(2) {
+    width: 100%;
+    margin: 7rem auto 0;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    @include mixins.flex-center-align;
+
+    @include mixins.tablet{
+      width:90%;
+      height:12.5rem;
+      flex-direction: column;
+      flex-wrap:wrap;
+    }
+    @include mixins.mobile{
+      margin-top:1.875rem;
+    }
+
+    li {
+      display: flex;
+      @include mixins.flex-center-align;
+      align-items: center;
+      width: 127px;
+      height: 80px;
+      background-color: variables.$white-color;
+      border-radius: 8px;
+      @include mixins.card-shadow;
+      @include mixins.tablet{
+        width: calc(25% - 9px);
+        height:5rem;
+      }
+
+      img {
+        width: 60%;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+}
