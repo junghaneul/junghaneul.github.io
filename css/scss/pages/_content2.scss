@@ -239,7 +239,6 @@
     a{
       @include mixins.tablet{
         display:flex;
-        flex-direction:column;
         margin-top:auto;
         width:20%;
       }
