@@ -1,0 +1,14 @@
+@use '../abstracts/mixins';
+@use '../abstracts/variables';
+
+.allWrap {
+  width: 100%;
+  max-width:1920px;
+  margin:0 auto;
+  background: variables.$bg-light-gray;
+  position: relative;
+
+  @include mixins.mobile {
+    padding:0 3%;
+  }
+}
