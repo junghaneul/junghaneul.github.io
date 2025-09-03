@@ -1,12 +1,17 @@
-안녕하세요, 디자이너의 눈을 가진 퍼블리셔 정하늘입니다.
+# 퍼블리싱 포트폴리오 | 정하늘
+
+🎨 디자인을 이해하는 퍼블리셔 | HTML · CSS · SCSS · JavaScript  
+🖥️ 반응형 · 웹접근성 · 유지보수성 · 퍼포먼스 최적화 경험  
+
+🔗 데모사이트: https://junghaneul.github.io  
+🔗 GitHub Repo: https://github.com/junghaneul/junghaneul.github.io 
 
 🚀 프로젝트 소개
 저의 기술 스택을 활용하여 제작한 개인 포트폴리오 웹사이트입니다.  
 <b>해당 사이트의 디자인은 유튜버 디자이너 마디아의 디자인을 사용</b>했으며, 원작자와 합의가 되었습니다.  
 프로젝트 경험과 기술 역량을 명확하게 보여드리기 위해 만들었습니다.
 
-- 🔗 데모 페이지 : https://junghaneul.github.io
-- 🗓️ 제작 기간 : 2025년 7월 23일 ~ 2025년 8월 13일
+- 🗓️ 제작 기간 : 약 2주 소요
 - 사용한 디자인 https://www.youtube.com/watch?v=NX_Ow_aEeZ0&list=PLs8gZ5b9piXUuczVc_m-2ZJ5zcMMuJRLz&index=20
 <br>
 
